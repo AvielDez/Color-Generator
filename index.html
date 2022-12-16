@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/tintof_favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+     <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Tintof | Color Generator</title>
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <p>Tintof</p>
+            <img class="logo-img" src="images/tintof-logo.png" alt="logo">
+            <img class="your-pallets-icon" src="images/icon-your-pallets.png" alt="your pallets icon">
+            <select name="color-method" id="color-method" class="color-method">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-Complement</option>
+                <option value="triad">Triad</option>
+            </select>
+        </nav>
+        
+    </header>
+   
+    <main>
+        <div id="color-container" class="color-container"></div>
+    </main>
+
+    <footer>
+        <button id="generate-btn" class="generate-btn">Generate</button>
+        <input class="color-picker" type="color" name="color-picker" id="side-color-picker"> 
+        <button id="random-btn" class="generate-btn random-btn"></button>
+        <button id="btn-conversion" class="menu-btn">Color Conversions</button>
+        <button id="btn-gradient" class="menu-btn">View as Gradient</button>
+        <img id="hamburger-menu" class="hamburger-menu-open" data-menu="side" src="images/icon-hamburger-menu.png" alt="open side menu">
+    </footer>
+    <!--Exists Outside of main body-->
+    <div id="side-menu" class="mobile-side-menu display-none">
+        <button id="side-btn-conversion" class="menu-btn">Color Conversions</button>
+        <button id="side-btn-gradient" class="menu-btn">View as Gradient</button>
+    </div>
+    <!--Modal for Conversions-->
+    <div id="modal-conversions" class="modal display-none">
+        <div class="modal-top">
+            <img id="modal-conversions-closed" class="modal-closed" src="images/icon-close-menu.png" alt="close conversions modal">
+            <h1 class="modal-title">Conversions</h1>
+            <div class="blank"></div>
+        </div>
+        
+        <div id="modal-conversions-container" class="modal-conversions-container"></div>
+
+        <div class="modal-bottom">
+            <div id="modal-color-pallet-container" class="modal-color-pallet-container"></div>
+        </div>
+    </div>
+    <!--Modal for Gradient-->
+    <div id="modal-gradient" class="modal display-none">
+        <div class="modal-top">
+            <img id="modal-gradient-closed" class="modal-closed" src="images/icon-close-menu.png" alt="close conversions modal">
+            <h1 class="modal-title">Gradient</h1>
+            <div class="blank"></div>
+        </div>
+        
+        <div id="modal-gradient-container" class="modal-gradient-container"></div>
+
+        <div class="modal-bottom"></div>
+    </div>
+
+    <div id="invisible-menu" class="invisible-menu display-none" data-menu="side"></div>
+    <div id="modal-invisible-menu" class="invisible-menu display-none"></div>
+    <div id="copied-message" class="copied-message display-none"><p>Copied to clipboard</p></div>
+    <script src="js/app.js" type="module"></script> 
+</body>
+</html>
